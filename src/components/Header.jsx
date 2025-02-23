@@ -16,6 +16,13 @@ export default function Header() {
                     </form>
                 </div>
             </div>
+            <div className='max-w-7xl m-auto mt-4'>
+                <nav>
+                    <a href="">Home</a>
+                    <a href="">Shop</a>
+                    <a href="">Reviews</a>
+                </nav>
+            </div>
         </header>
     )
 }
