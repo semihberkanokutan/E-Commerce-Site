@@ -14,6 +14,13 @@ const HeaderBuild = styled.header`
 
         & .logo-nav {
             color: rgb(231, 229, 228);
+            font-size: 2rem;
+            font-weight: bold;
+
+            &:hover {
+                color: #fff;
+            }
+
         }
 
         & > div {
@@ -44,9 +51,12 @@ const HeaderBuild = styled.header`
                 & input {
                     width: 100%;
                     padding-left: 2rem;
+                    padding-right: 1.2rem;
                     background: rgb(231, 229, 228);
                     padding-top: 0.5rem;
                     padding-bottom: 0.5rem;
+
+                    outline: none;
                 }
         }
     }
@@ -71,11 +81,11 @@ export default function Header() {
         <HeaderBuild>
             <div className='my-container'>
                 <section className='header-top'>
-                    <a href="" className='logo-nav'>MYSTORE</a>
+                    <a href="" className='logo-nav'>MYSTORE <i class="fa-solid fa-store"></i></a>
                     <div>
-                        <a href="#" >My Account</a>
+                        <a href="#">My Account</a>
                         <form>
-                            <div>
+                            <div> 
                                 <i class="fa-solid fa-magnifying-glass"></i>
                                 <input type="text" placeholder='Search products...'/> 
                             </div>
@@ -85,9 +95,9 @@ export default function Header() {
 
                 <section className='header-bottom'>
                     <nav>
-                        <a href="">Home</a>
-                        <a href="">Shop</a>
-                        <a href="">Reviews</a>
+                        <a href="" className='hover:text-white'>Home</a>
+                        <a href="" className='hover:text-white'>Shop</a>
+                        <a href="" className='hover:text-white'>Reviews</a>
                     </nav>
                     <ShoppingCart />
                 </section>
