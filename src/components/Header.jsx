@@ -60,6 +60,7 @@ const HeaderBuild = styled.header`
             display: flex;
             gap: 1.25rem;
             color: rgb(214, 211, 209);
+            align-items: center;
         }
     }
 
