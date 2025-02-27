@@ -32,6 +32,7 @@ const VideoSectionBuild = styled.section`
         & h1 {
             font-size: 2.4rem;
             font-weight: bold;
+            text-align: center;
         }
 
         & button {
@@ -48,16 +49,22 @@ const VideoSectionBuild = styled.section`
 
         
     }
+
+    @media (max-width: 576px) {
+        height: calc(100vh - 92px);
+    }
 `
 
 export default function VideoSection() {
     return (
         <VideoSectionBuild>
             <video src={vid} className='brightness-50'></video>
-            <div className='videoContent'>
-                <h1>Where Style Meets Convenience!</h1>
-                <p className='text-center'>Discover top-quality products at unbeatable prices! Enjoy hassle-free shopping, exclusive deals, and fast delivery. <br />Upgrade your lifestyle with just a click.</p>
-                <button>Go shopping →</button>
+            <div className='my-container'>
+                <div className='videoContent'>
+                    <h1>Where Style Meets Convenience!</h1>
+                    <p className='text-center'>Discover top-quality products at unbeatable prices! Enjoy hassle-free shopping, exclusive deals, and fast delivery. <br />Upgrade your lifestyle with just a click.</p>
+                    <button>Go shopping →</button>
+                </div>
             </div>
         </VideoSectionBuild>
     )

@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import logo from '../assets/logo.png'
 import magGlassIcon from '../assets/magnifying-glass.png'
 import ShoppingCart from './ShoppingCart'
@@ -72,27 +73,84 @@ const HeaderBuild = styled.header`
             color: rgb(214, 211, 209);
             align-items: center;
         }
+
+        
+    }
+
+    .headerMenu {
+        color: rgb(214, 211, 209);
+        padding-bottom: 24px;
+        transition: all 0.8s ease !important;
+        overflow: hidden;
+
+        & ul {
+            & li {
+                margin-top: 20px;
+            }
+        }
+    }
+
+    #headerMenuToggle {
+        color: rgb(214, 211, 209);
+        border: 2px solid rgb(214, 211, 209);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 8px 14px;
+        font-weight: bold;
+        transition: all 1s;
+
+        & i {
+            transition: all 1s;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .header-bottom {
+            display: none;
+        }
+    }
+
+    @media (min-width: 576px) {
+        #headerMenuToggle {
+            display: none;
+        }
+
+        .headerMenu {
+            display: none;
+        }
     }
 
 `
 
 export default function Header() {
+    const [isMenuToggled, setIsMenuToggled] = useState(false)
+
+    function toggleMenu() {
+        setIsMenuToggled(!isMenuToggled)
+    }
+
     return (
         <HeaderBuild>
             <div className='my-container'>
                 <section className='header-top'>
                     <a href="" className='logo-nav'>MYSTORE <i class="fa-solid fa-store"></i></a>
                     <div>
-                        <a href="#">My Account</a>
-                        <form>
+                        <a href="#" className='max-sm:hidden'>My Account</a>
+                        <form className='max-sm:hidden'>
                             <div> 
                                 <i class="fa-solid fa-magnifying-glass"></i>
                                 <input type="text" placeholder='Search products...'/> 
                             </div>
                         </form>
                     </div>
+                    <button id='headerMenuToggle' onClick={toggleMenu}>
+                        <i className="fa-solid fa-bars" style={{display: `${isMenuToggled ? 'none' : 'block'}`, width: '16px', height: '16px'}}></i>
+                        <i className="fa-solid fa-xmark" style={{display: `${isMenuToggled ? 'block' : 'none'}`, width: '16px', height: '16px'}}></i>
+                        Menu
+                    </button>
                 </section>
-
                 <section className='header-bottom'>
                     <nav>
                         <a href="" className='hover:text-white'>Home</a>
@@ -101,6 +159,15 @@ export default function Header() {
                     </nav>
                     <ShoppingCart />
                 </section>
+                <menu className={`headerMenu ${isMenuToggled ? 'h-[240px]' : 'h-0'}`}>
+                    <ul>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Shop</a></li>
+                        <li><a href="">Reviews</a></li>
+                        <li><a href="">Cart</a></li>
+                        <li><a href="">My Account</a></li>
+                    </ul>
+                </menu>
             </div>
         </HeaderBuild>
     )
