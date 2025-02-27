@@ -73,7 +73,7 @@ export default function ShoppingCart() {
                     <div className="absolute bg-stone-900 w-full top-[42px]">
                         <p className="text-stone-400 text-center">No products in the cart.</p>
                     </div>*/}
-                <div className={`absolute bg-stone-900 w-full origin-top top-[72px] ${isHovered ? 'block' : 'hidden'}`}>
+                <div className={`z-10 absolute bg-stone-900 w-full origin-top top-[72px] ${isHovered ? 'block' : 'hidden'}`}>
                     <ShoppingCartItem/>
                     <ShoppingCartItem/>
                     <div className="shoppingCartFooter">
