@@ -31,7 +31,7 @@ export default function TopRatedProducts() {
                     {TOPRATEDPRODUCTS.map((item) => {
                         return (
                             <li key={item.productName}>
-                                <ProductItem {...item} type="top-rated"/>
+                                <ProductItem {...item} topRated={true}/>
                             </li>
                         )
                     })}
