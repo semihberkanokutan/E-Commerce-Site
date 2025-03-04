@@ -7,6 +7,7 @@ import VideoSection from './components/VideoSection'
 import ProductCategories from './components/ProductCategories'
 import TopRatedProducts from './components/TopRatedProducts'
 import OnSaleProducts from './components/OnSaleProducts'
+import Footer from './components/Footer'
 
 function App() {
   
@@ -18,6 +19,7 @@ function App() {
       <ProductCategories />
       <TopRatedProducts />
       <OnSaleProducts />
+      <Footer />
     </>
   )
 }
