@@ -19,7 +19,7 @@ const ShoppingCartBuild = styled.div`
     }
 
     & #viewCartBtn {
-        background: #B771E5;
+        background: #5B913B;
         width: 100%;
         padding-top: 10px;
         padding-bottom: 10px;

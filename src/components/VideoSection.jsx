@@ -36,7 +36,7 @@ const VideoSectionBuild = styled.section`
         }
 
         & button {
-            background: #B771E5;
+            background: #5B913B;
             padding: 10px 20px;
             font-weight: bold;
             margin-top: 1rem;
