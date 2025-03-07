@@ -35,7 +35,7 @@ const ShoppingCartItemBuild = styled.a`
     }
 `
 
-export default function ShoppingCartItem() {
+export default function ShoppingCartItem({productName, price, productImg, quantity}) {
 
     function had() {
         console.log('dasfda')
@@ -43,12 +43,12 @@ export default function ShoppingCartItem() {
 
     return (
         <ShoppingCartItemBuild href="#" className='flex'>
-            <div className='flex flex-wrap items-center'>
+            <div className='flex flex-wrap items-center gap-5'>
                 <button className='removeItemBtn' onClick={had}><i className="fa-solid fa-xmark"></i></button>
-                <p className='productName'>Product Name</p>
-                <span className='totalPrice'>1 x $100</span>
+                <p className='productName'>{productName}</p>
+                <span className='totalPrice'>{quantity} x {price}</span>
             </div>
-            <img src={backpack} alt="" className='productImg'/>
+            <img src={productImg} alt="" className='productImg'/>
         </ShoppingCartItemBuild>
     )
 }

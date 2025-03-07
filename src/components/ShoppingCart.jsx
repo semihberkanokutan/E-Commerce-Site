@@ -1,6 +1,22 @@
 import { useState } from "react"
 import styled from "styled-components"
 import ShoppingCartItem from "./ShoppingCartItem"
+import myImg from '../assets/products/backpack1.jpg'
+
+const PRODUCTSONCART = [
+    {
+        productImg: myImg,
+        productName: 'Backpack',
+        price: 10,
+        quantity: 2
+    },
+    {
+        productImg: myImg,
+        productName: 'Backpack',
+        price: 14,
+        quantity: 1
+    }
+]
 
 const ShoppingCartBuild = styled.div`
 
@@ -74,8 +90,11 @@ export default function ShoppingCart() {
                         <p className="text-stone-400 text-center">No products in the cart.</p>
                     </div>*/}
                 <div className={`z-10 absolute bg-stone-900 w-full origin-top top-[72px] ${isHovered ? 'block' : 'hidden'}`}>
-                    <ShoppingCartItem/>
-                    <ShoppingCartItem/>
+                    {PRODUCTSONCART.map((item) => {
+                        return (
+                            <ShoppingCartItem {...item}/>
+                        )
+                    })}
                     <div className="shoppingCartFooter">
                         <p>Subtotal: $100</p>
                         <button id="viewCartBtn">View cart →</button>

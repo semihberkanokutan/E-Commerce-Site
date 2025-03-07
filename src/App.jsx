@@ -15,10 +15,12 @@ function App() {
   return (
     <>
       <Header />
-      <VideoSection />
-      <ProductCategories />
-      <TopRatedProducts />
-      <OnSaleProducts />
+      <main>
+        <VideoSection />
+        <ProductCategories />
+        <TopRatedProducts />
+        <OnSaleProducts />
+      </main>
       <Footer />
     </>
   )
