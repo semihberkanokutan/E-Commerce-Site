@@ -12,7 +12,7 @@ const PRODUCTSONCART = [
     },
     {
         productImg: myImg,
-        productName: 'Backpack',
+        productName: 'Backpack2',
         price: 14,
         quantity: 1
     }
@@ -92,7 +92,7 @@ export default function ShoppingCart() {
                 <div className={`z-10 absolute bg-stone-900 w-full origin-top top-[72px] ${isHovered ? 'block' : 'hidden'}`}>
                     {PRODUCTSONCART.map((item) => {
                         return (
-                            <ShoppingCartItem {...item}/>
+                            <ShoppingCartItem {...item} key={item.productName}/>
                         )
                     })}
                     <div className="shoppingCartFooter">

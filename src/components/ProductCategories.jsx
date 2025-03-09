@@ -32,7 +32,7 @@ export default function ProductCategories() {
                     {CATEGORIES.map((item) => {
                         return (
                             <li key={item.categoryName}>
-                                <a href="" className='productCategoryItem'>
+                                <a href="../../product-detail.html" className='productCategoryItem'>
                                     <img src={item.img} alt={item.categoryName} className='h-[500px] w-full 
                                     hover:brightness-50 transition-all duration-300 ease-linear'/>
                                     <h4 className='text-center mt-3 text-gray-800'>

@@ -10,19 +10,19 @@ const TOPRATEDPRODUCTS = [
     },
     {
         img: myImg,
-        productName: 'Backpack',
+        productName: 'Backpack2',
         rate: '✮✮✮✮✮',
         price: 14
     },
     {
         img: myImg,
-        productName: 'Backpack',
+        productName: 'Backpack3',
         rate: '✮✮✮',
         price: 12
     },
     {
         img: myImg,
-        productName: 'Backpack',
+        productName: 'Backpack4',
         rate: '✮✮✮',
         price: 12
     }

@@ -11,21 +11,21 @@ const ONSALEPRODUCTS = [
     },
     {
         img: myImg,
-        productName: 'Backpack',
+        productName: 'Backpack2',
         rate: '✮✮✮✮✮',
         price: 14,
         discounted: 20
     },
     {
         img: myImg,
-        productName: 'Backpack',
+        productName: 'Backpack3',
         rate: '✮✮✮',
         price: 12,
         discounted: 22
     },
     {
         img: myImg,
-        productName: 'Backpack',
+        productName: 'Backpack4',
         rate: '✮✮✮',
         price: 12,
         discounted: 28
